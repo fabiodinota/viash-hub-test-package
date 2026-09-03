@@ -1,0 +1,6 @@
+name: viash_hub_test_package
+description: A minimal package for testing Viash Hub build and repository states.
+license: MIT
+viash_version: 0.9.7
+source: src
+target: target

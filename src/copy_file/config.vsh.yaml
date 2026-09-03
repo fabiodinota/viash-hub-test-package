@@ -1,0 +1,27 @@
+name: copy_file
+description: Copy a small text file to an output path.
+arguments:
+  - type: file
+    name: --input
+    description: Text file to copy.
+    example: input.txt
+    required: true
+  - type: file
+    name: --output
+    description: Destination for the copied text file.
+    direction: output
+    example: output.txt
+    required: true
+resources:
+  - type: bash_script
+    path: script.sh
+engines:
+  - type: docker
+    image: bash:5.2
+  - type: native
+runners:
+  - type: executable
+  - type: nextflow
+test_resources:
+  - type: bash_script
+    path: test.sh
